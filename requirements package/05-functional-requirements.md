@@ -13,6 +13,7 @@ The tool shall allow a user to select an employee entry from the list in order t
 The tool shall allow a user to create a new employee record by providing first name and last name.
 
 - First name and last name are required to create a record.
+- The employee ID shall be assigned by the tool at creation; the user does not provide it.
 - A newly created employee shall have a status of **Active**, unless otherwise specified at creation.
 - After creation, the new employee shall appear in the employee list and be selectable for further operations.
 
