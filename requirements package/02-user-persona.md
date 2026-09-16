@@ -2,7 +2,9 @@
 
 ## Persona: Employee record maintainer
 
-Staff responsible for keeping a current list of employees and whether each person is active or inactive. There is only one persona in this release: anyone who can access the tool can view the employee list and perform every maintenance activity, so viewers and maintainers are the same people.
+Staff responsible for maintaining a current list of employees and whether each person is active or inactive. Maintaining the list means adding employee records, editing them, activating them, and deactivating them; all four are responsibilities of this persona.
+
+There is only one persona in this release: anyone who can access the tool can view the employee list and perform all four maintenance activities, so viewers and maintainers are the same people.
 
 **Goals**
 - Add employees to the list, both new hires as they join and existing employees who are already with the organization
