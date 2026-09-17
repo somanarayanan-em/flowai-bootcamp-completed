@@ -9,7 +9,7 @@ Registers that sit beside the baseline (requirements, design, implementation pla
 
 ## Path override
 
-[PHASE-EXECUTION-GUIDE.md](../Student%20Resource%20Files/PHASE-EXECUTION-GUIDE.md) names `docs/implementation/bugs-and-issues-log.md`. **This repository uses** [bugs-and-issues-log.md](bugs-and-issues-log.md) in this folder. Workflow is unchanged: log, do not fix; later PHASE-BUG-n after human review.
+[PHASE-EXECUTION-GUIDE.md](../student-resource-files/PHASE-EXECUTION-GUIDE.md) names `docs/implementation/bugs-and-issues-log.md`. **This repository uses** [bugs-and-issues-log.md](bugs-and-issues-log.md) in this folder (`docs/project-control/`). Workflow is unchanged: log, do not fix; later PHASE-BUG-n after human review.
 
 ## Agent pickup
 

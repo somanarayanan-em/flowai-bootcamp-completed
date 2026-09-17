@@ -2,7 +2,7 @@
 
 This document records bugs and issues found during testing. Items are logged for later remediation; **do not fix at log time**. Each entry includes where the issue likely resides and which requirements or solution documents are impacted.
 
-**Path for this repo:** `project-control/bugs-and-issues-log.md` (overrides `docs/implementation/bugs-and-issues-log.md` in the execution guide).
+**Path for this repo:** `docs/project-control/bugs-and-issues-log.md` (overrides `docs/implementation/bugs-and-issues-log.md` in the execution guide).
 
 ## Conventions
 
@@ -94,9 +94,9 @@ Copy the block below into **Entries**. Replace n with the next number. Add a row
 
 | Document | Path | IDs hit (FR/AC/BR/UI/NFR) |
 |----------|------|---------------------------|
-| Functional requirements | `requirements package/05-functional-requirements.md` | FR-6 |
-| API design | `solution-design/Core design/api-design.md` | FR-6, AC-9, BR-7 |
-| Phase spec | `implementation-package/phases/PHASE-004.md` | PHASE-004 activate/deactivate |
+| Functional requirements | `docs/requirements-package/05-functional-requirements.md` | FR-6 |
+| API design | `docs/solution-design/Core design/api-design.md` | FR-6, AC-9, BR-7 |
+| Phase spec | `docs/implementation-package/phases/PHASE-004.md` | PHASE-004 activate/deactivate |
 
 #### Table D — Reproduction
 
@@ -135,10 +135,10 @@ Copy the block below into **Entries**. Replace n with the next number. Add a row
 
 | Document | Path | IDs hit (FR/AC/BR/UI/NFR) |
 |----------|------|---------------------------|
-| UI interaction | `requirements package/06-ui-interaction-requirements.md` | UI-1 |
-| Non-functional | `requirements package/08-non-functional-requirements.md` | NFR-1 |
-| Frontend design | `solution-design/Experience/frontend-design.md` | UI-1, create/edit cards, out of this design |
-| Phase spec | `implementation-package/phases/PHASE-005.md` | PHASE-005 list and shells |
+| UI interaction | `docs/requirements-package/06-ui-interaction-requirements.md` | UI-1 |
+| Non-functional | `docs/requirements-package/08-non-functional-requirements.md` | NFR-1 |
+| Frontend design | `docs/solution-design/Experience/frontend-design.md` | UI-1, create/edit cards, out of this design |
+| Phase spec | `docs/implementation-package/phases/PHASE-005.md` | PHASE-005 list and shells |
 
 #### Table D — Reproduction
 
@@ -177,9 +177,9 @@ Copy the block below into **Entries**. Replace n with the next number. Add a row
 
 | Document | Path | IDs hit (FR/AC/BR/UI/NFR) |
 |----------|------|---------------------------|
-| UI interaction | `requirements package/06-ui-interaction-requirements.md` | UI-1 |
-| Frontend design | `solution-design/Experience/frontend-design.md` | UI-1 single page |
-| Phase spec | `implementation-package/phases/PHASE-005.md` | PHASE-005 page render |
+| UI interaction | `docs/requirements-package/06-ui-interaction-requirements.md` | UI-1 |
+| Frontend design | `docs/solution-design/Experience/frontend-design.md` | UI-1 single page |
+| Phase spec | `docs/implementation-package/phases/PHASE-005.md` | PHASE-005 page render |
 
 #### Table D — Reproduction
 

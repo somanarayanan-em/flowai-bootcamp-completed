@@ -2,7 +2,7 @@
 
 **Status:** Scaffold  
 **Folder:** Experience  
-**Source:** `requirements package/03-user-access.md`, FR-7, NFR-6, NFR-7
+**Source:** `docs/requirements-package/03-user-access.md`, FR-7, NFR-6, NFR-7
 
 ## Purpose
 

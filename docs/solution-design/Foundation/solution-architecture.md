@@ -135,7 +135,7 @@ No other resources.
 
 ## What this architecture excludes
 
-Aligned with `requirements package/11-out-of-scope.md`:
+Aligned with `docs/requirements-package/11-out-of-scope.md`:
 
 - Extra employee attributes; extra name parts
 - Delete, bulk import/export, search/sort/filter/paging, undo

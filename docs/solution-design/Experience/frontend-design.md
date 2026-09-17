@@ -2,7 +2,7 @@
 
 **Status:** Approved  
 **Folder:** Experience  
-**Source:** `requirements package/06-ui-interaction-requirements.md`, `09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](business-logic.md)
+**Source:** `docs/requirements-package/06-ui-interaction-requirements.md`, `09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](business-logic.md)
 
 ## Purpose
 

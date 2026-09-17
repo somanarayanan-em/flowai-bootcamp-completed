@@ -22,7 +22,7 @@
 
 1. Implement `GET /employees` with no query parameters
 2. Read every row from the employee table (Active and Inactive)
-3. Return HTTP 200 and a JSON array of employee objects using field names from [`solution-design/Core design/api-design.md`](../../solution-design/Core%20design/api-design.md)
+3. Return HTTP 200 and a JSON array of employee objects using field names from [`docs/solution-design/Core design/api-design.md`](../../solution-design/Core%20design/api-design.md)
 4. Return `[]` when there are no rows; do not treat empty as an error
 5. Do not add search, sort, filter, or paging
 6. Add pytest cases: empty store returns `[]`; after inserting mixed Active and Inactive rows (via test setup), the response includes all of them with all four fields

@@ -20,4 +20,4 @@ Scaffolding for the employee list maintenance solution. Content must trace only 
 
 ## Source of truth
 
-Requirements live in [`requirements package/`](../requirements%20package/). Open questions in `10-assumptions-open-questions.md` stay unanswered here. Items in `11-out-of-scope.md` are not designed.
+Requirements live in [`docs/requirements-package/`](../requirements-package/). Open questions in `10-assumptions-open-questions.md` stay unanswered here. Items in `11-out-of-scope.md` are not designed.

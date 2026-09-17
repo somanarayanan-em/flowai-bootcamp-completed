@@ -2,7 +2,7 @@
 
 **Status:** Approved  
 **Folder:** Experience  
-**Source:** `requirements package/07-business-rules-validation.md`, `05-functional-requirements.md`, [api-design.md](../Core%20design/api-design.md)
+**Source:** `docs/requirements-package/07-business-rules-validation.md`, `05-functional-requirements.md`, [api-design.md](../Core%20design/api-design.md)
 
 ## Purpose
 

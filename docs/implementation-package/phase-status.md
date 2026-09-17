@@ -7,7 +7,7 @@ Progress tracker for the employee list implementation. **This file is the source
 1. Read this table top to bottom (dependency order).
 2. The next phase to execute is the first row whose Status is **Not Started** (skip **Completed**; stop if **Blocked** unless the user asks to work the blocker).
 3. Open that row’s **Phase ID** link. Execute only that file’s Identity, Goal, Dependencies, Plan, Outcome, and gates. Do not implement later phases in the same pass.
-4. Follow [PHASE-EXECUTION-GUIDE.md](../Student%20Resource%20Files/PHASE-EXECUTION-GUIDE.md) (educate → go/no-go → branch → implement → verify → do not commit until approved).
+4. Follow [PHASE-EXECUTION-GUIDE.md](../student-resource-files/PHASE-EXECUTION-GUIDE.md) (educate → go/no-go → branch → implement → verify → do not commit until approved).
 5. When status changes, update **Status**, **Completion date**, and **Blockers** on that row. Do not rewrite a phase file unless the user asks to change the plan (that is a [change-tracker](../project-control/change-tracker.md) item, Status **approved**, then apply).
 6. At phase end (execution-guide Step 4.5), ask whether to log bugs in [bugs-and-issues-log.md](../project-control/bugs-and-issues-log.md). Log only; do not fix at log time.
 

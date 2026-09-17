@@ -2,7 +2,7 @@
 
 **Status:** Approved  
 **Folder:** Core design  
-**Source:** `requirements package/04-data-requirements.md`, `07-business-rules-validation.md`, NFR-4, NFR-5, [solution-architecture.md](../Foundation/solution-architecture.md)
+**Source:** `docs/requirements-package/04-data-requirements.md`, `07-business-rules-validation.md`, NFR-4, NFR-5, [solution-architecture.md](../Foundation/solution-architecture.md)
 
 ## Purpose
 

@@ -51,7 +51,7 @@ One organization-wide SQLite file holds an empty employee table with employee ID
 
 #### Human Verification (Human Gate)
 
-1. Review the table against [`solution-design/Core design/db-design.md`](../../solution-design/Core%20design/db-design.md) (only four fields)
+1. Review the table against [`docs/solution-design/Core design/db-design.md`](../../solution-design/Core%20design/db-design.md) (only four fields)
 2. Confirm employee ID is not treated as an HR or payroll number
 3. Confirm there is no delete or bulk-load path in the store layer
 

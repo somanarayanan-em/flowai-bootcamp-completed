@@ -39,6 +39,10 @@ npm run dev
 
 App: `http://localhost:5173`.
 
+## Documentation
+
+Project docs are under [`docs/`](docs/README.md): requirements, solution design, implementation phases, and project control.
+
 ## Run pytest
 
 ```bash

@@ -2,7 +2,7 @@
 
 **Status:** Draft  
 **Folder:** Operations  
-**Source:** `requirements package/09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](../Experience/business-logic.md), [backend-design.md](../Core%20design/backend-design.md)
+**Source:** `docs/requirements-package/09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](../Experience/business-logic.md), [backend-design.md](../Core%20design/backend-design.md)
 
 ## Purpose
 
