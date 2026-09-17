@@ -54,6 +54,26 @@ def list_employees(database_path):
         connection.close()
 
 
+def get_employee(database_path, employee_id):
+    ensure_schema(database_path)
+    connection = connect(database_path)
+    try:
+        row = connection.execute(
+            "SELECT id, first_name, last_name, status FROM employee WHERE id = ?",
+            (employee_id,),
+        ).fetchone()
+        if row is None:
+            return None
+        return {
+            "id": row["id"],
+            "firstName": row["first_name"],
+            "lastName": row["last_name"],
+            "status": row["status"],
+        }
+    finally:
+        connection.close()
+
+
 def insert_employee(database_path, first_name, last_name, status="Active"):
     """Insert a row. SQLite assigns id; callers must not pass id."""
     trimmed_first = (first_name or "").strip()
