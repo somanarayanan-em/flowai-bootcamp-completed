@@ -16,7 +16,8 @@ HTTP JSON API used by the React page. Endpoints exist only for list, create, edi
 | Resource | Employee. One shared list. |
 | Employee ID | In the path after the record exists. Never accepted on create. Never accepted as an editable field. |
 | JSON fields | `id` (number, system-assigned), `firstName`, `lastName`, `status` (`Active` or `Inactive`) |
-| Create / edit body | `firstName` and `lastName` only |
+| Create body | `firstName` and `lastName` required; `status` optional (`Active` or `Inactive`; default **Active**) |
+| Edit body | `firstName` and/or `lastName` (at least one present); `status` ignored |
 | Activate / deactivate body | None. ID in the path only. No name fields. |
 | Success | Returned only after the change is committed (NFR-4) |
 | Failure body | `{ "message": "<plain text>" }` so the page can satisfy UI-7 |
@@ -73,8 +74,8 @@ Repeat activate on an already active record, and repeat deactivate on an already
 }
 ```
 
-- **Rules:** Both names required after trimming spaces (BR-1). Do not send `id` or `status`. If `id` is sent, ignore it; the tool assigns `id`. Status of the new record is **Active** (FR-3, BR-4). Same name as an existing employee is allowed (BR-3, AC-6).
-- **Success (201):** employee object including assigned `id` and `status: "Active"`
+- **Rules:** Both names required after trimming spaces (BR-1). If `id` is sent, ignore it; the tool assigns `id`. If `status` is omitted, store **Active**. If `status` is sent, it must be `Active` or `Inactive` (FR-3, BR-4). Same name as an existing employee is allowed (BR-3, AC-6). The React create form does not send `status`.
+- **Success (201):** employee object including assigned `id` and the stored `status`
 - **Validation failure (400):** no row created; `message` states what is missing or invalid (AC-5, BR-8)
 
 ### Edit employee
@@ -90,7 +91,7 @@ Repeat activate on an already active record, and repeat deactivate on an already
 }
 ```
 
-- **Rules:** `{id}` is the existing employee ID. Both `firstName` and `lastName` are required after trimming (BR-1). The UI sends both fields pre-filled so one or both names can change (FR-4). This request must not change `status`. `id` in the body, if present, is ignored; the path ID is the record.
+- **Rules:** `{id}` is the existing employee ID. Body may include `firstName`, `lastName`, or both. At least one name field must be present. A present name must be non-empty after trim (BR-1). An omitted name is left unchanged (FR-4). `status` and `id` in the body are ignored; the path ID is the record. The React edit form still sends both names pre-filled.
 - **Success (200):** employee object with updated names and **unchanged** `status` (AC-7)
 - **Validation failure (400):** record untouched; `message` states what to correct (BR-8)
 - **Unknown id (404):** no update
@@ -124,7 +125,6 @@ There is no `DELETE /employees/{id}`.
 - Bulk import or export
 - Login, session, or permission endpoints
 - An endpoint whose only job is “select”
-- A create-time `status` field (UI-4 has none; new records are Active)
 - Extra attributes (email, department, and the rest of out-of-scope data)
 
 ## Related design documents

@@ -17,8 +17,8 @@ Each write is: validate if needed, one SQLite transaction, success only after co
 | Operation | Input | Behavior |
 |-----------|--------|----------|
 | List | None | Return every employee: id, first name, last name, status. Active and inactive. Empty list is valid. No paging. |
-| Create | First name, last name | Trim. Reject if either is missing or only spaces. Ignore client id or status. Insert with status **Active**. ID comes from SQLite. Duplicate names allowed. |
-| Edit | Existing id, first name, last name | If id is unknown, fail with no write. Trim names. Reject if either is missing or only spaces. Update names only. Status and id unchanged. |
+| Create | First name, last name; status optional | Trim. Reject if either name is missing or only spaces. Ignore client id. If status omitted, store **Active**; if present, must be Active or Inactive. ID comes from SQLite. Duplicate names allowed. |
+| Edit | Existing id; first name and/or last name | If id is unknown, fail with no write. At least one name field required. Trim present names; reject if a present name is empty. Omitted name unchanged. Ignore status in the body. |
 | Activate | Existing id | If id is unknown, fail with no write. Set status **Active**. Do not change names. Already Active is success, not an error. |
 | Deactivate | Existing id | If id is unknown, fail with no write. Set status **Inactive**. Do not change names. Do not delete. Already Inactive is success, not an error. Row stays in the list. |
 
@@ -34,10 +34,10 @@ Each write is: validate if needed, one SQLite transaction, success only after co
 
 | Rule | When | On failure |
 |------|------|------------|
-| BR-1 Required names | Create, edit | Save nothing. Message states what is missing or only spaces. Trim first so `"   "` is empty. |
+| BR-1 Required names | Create: both names. Edit: any name that is sent, and at least one name field | Save nothing. Message states what is missing or only spaces. Trim first so `"   "` is empty. |
 | BR-2 ID unique and permanent | Create | SQLite assigns `id`. Never update `id`. Never take `id` from the create body. |
 | BR-3 Duplicate names allowed | Create, edit | Matching name must not block. |
-| BR-4 Status Active or Inactive | Create; activate; deactivate | Create always stores Active. |
+| BR-4 Status Active or Inactive | Create; activate; deactivate | Create defaults to Active if status omitted; if sent, only Active or Inactive. |
 | BR-5 Status vs name | Edit vs activate/deactivate | Edit does not write status. Activate/deactivate do not write names. |
 | BR-6 Repeat status change | Activate, deactivate | Same status is success. |
 | BR-7 Deactivation is not deletion | Deactivate | Update status only. |

@@ -1,29 +1,37 @@
 # Tech Stack
 
-**Status:** Scaffold  
+**Status:** Draft  
 **Folder:** Foundation  
-**Source:** Bound implementation choices; must still implement only required behavior
+**Pinned:** 17 September 2026 (current stable releases on that date)
 
 ## Purpose
 
-Name the languages, frameworks, and persistence used to deliver the requirements. Do not introduce products that imply out-of-scope features (search, auth providers, extra databases, mobile).
+Name and pin the languages, frameworks, and persistence used to deliver the requirements. Do not introduce products that imply out-of-scope features (search, auth providers, extra databases, mobile).
 
-## Locked choices
+## Locked choices (pinned)
 
-| Layer | Choice |
-|-------|--------|
-| Language / runtime | Python 3 |
-| API | Flask |
-| Frontend | React (single page) |
-| Persistence | SQLite |
+| Layer | Choice | Pin |
+|-------|--------|-----|
+| Language / runtime | Python | **3.14.7** (Flask 3.1 requires Python ≥ 3.9) |
+| API | Flask | **3.1.3** |
+| Frontend | React (single page) | **react 19.3.0**, **react-dom 19.3.0** |
+| Frontend toolchain | Vite | **vite 8.3.0**, **@vitejs/plugin-react 6.1.1** |
+| Frontend runtime | Node.js | **22 LTS** (required to run Vite) |
+| Persistence | SQLite via Python’s `sqlite3` | Engine version shipped with the pinned CPython (no separate SQLite product) |
+
+Implement against these versions. Do not float to a newer major without updating this document.
 
 ## Supporting libraries
 
-<!-- Only what is needed for JSON API, SQLite access, and a plain functional React UI. Lightweight layout/CSS helper is allowed. No brand theme. -->
+Only what is needed for JSON API, SQLite access, the React page talking to Flask, and layout (frontend-design).
 
-| Library | Role | Required by |
-|---------|------|-------------|
-| | | |
+| Library | Pin | Role | Required by |
+|---------|-----|------|-------------|
+| Flask-Cors | **6.0.5** | Allow the React origin to call the Flask API in local/dev | SPA + API on different ports |
+| Python `sqlite3` | stdlib | Read and write the employee store | NFR-4 |
+| Custom CSS (no component kit) | n/a | Spacing, table, buttons, chips, banner | Frontend design visual treatment |
+
+No SQLAlchemy, no UI component library, no auth SDK.
 
 ## Explicitly not in the stack
 
@@ -32,16 +40,19 @@ Name the languages, frameworks, and persistence used to deliver the requirements
 - Additional data stores
 - Dedicated mobile application
 - Internationalization frameworks as a product feature
+- Branded design systems
 
 ## Related design documents
 
 - [solution-overview.md](solution-overview.md)
 - [solution-architecture.md](solution-architecture.md)
+- [../Experience/frontend-design.md](../Experience/frontend-design.md)
 
 ## Traceability
 
 | Design section | Requirement IDs |
 |----------------|-----------------|
-| Plain functional UI | UI intro, NFR-1, out-of-scope presentation |
-| Persistence | NFR-4 |
-| Single page | UI-1 |
+| React single page | UI-1 |
+| Flask API | FR-1–FR-6 |
+| SQLite persistence | NFR-4 |
+| Layout CSS | Frontend design (richer one-page UI) |
