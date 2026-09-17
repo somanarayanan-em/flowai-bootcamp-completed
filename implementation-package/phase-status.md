@@ -15,7 +15,7 @@ Progress tracker for the employee list implementation. **This file is the source
 | Phase ID                         | Phase Name                                        | Status      | Completion date | Blockers |
 | -------------------------------- | ------------------------------------------------- | ----------- | --------------- | -------- |
 | [PHASE-000](phases/PHASE-000.md) | Project Foundation                                | Completed   | 2026-09-17      |          |
-| [PHASE-001](phases/PHASE-001.md) | Employee SQLite Store                             | Not Started |                 |          |
+| [PHASE-001](phases/PHASE-001.md) | Employee SQLite Store                             | Completed   | 2026-09-17      |          |
 | [PHASE-002](phases/PHASE-002.md) | List Employees API                                | Not Started |                 |          |
 | [PHASE-003](phases/PHASE-003.md) | Create Employee API                               | Not Started |                 |          |
 | [PHASE-004](phases/PHASE-004.md) | Edit, Activate, and Deactivate API                | Not Started |                 |          |
@@ -25,4 +25,4 @@ Progress tracker for the employee list implementation. **This file is the source
 
 Status values: Not Started, In Progress, Completed, Blocked.
 
-Index: [implementation-plan.md](implementation-plan.md). Next phase (from this table): **[PHASE-001](phases/PHASE-001.md)**.
+Index: [implementation-plan.md](implementation-plan.md). Next phase (from this table): **[PHASE-002](phases/PHASE-002.md)**.
