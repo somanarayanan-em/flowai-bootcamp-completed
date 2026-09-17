@@ -16,7 +16,7 @@ After **applied**, the packages are the source of truth. Do not leave the only c
 - Affects: Requirements, Design, Implementation plan (one or more).
 - Related bug: optional link to [bugs-and-issues-log.md](bugs-and-issues-log.md) when the trigger was a missed/new requirement.
 - Table C **After** cells must be paste-ready into the target document.
-- Phase when raised: Phase ID from [implementation-plan.md](../implementation-package/implementation-plan.md).
+- Phase when raised: Phase ID. Spec files are under [phases/](../implementation-package/phases/). Index: [implementation-plan.md](../implementation-package/implementation-plan.md).
 
 
 
@@ -56,7 +56,7 @@ Copy the block below into **Entries**. Replace 001 with the next number. Add a r
 | Title             |                                                                         |
 | Date raised       | YYYY-MM-DD                                                              |
 | Raised by         |                                                                         |
-| Phase when raised | [PHASE-000](../implementation-package/implementation-plan.md#phase-000) |
+| Phase when raised | [PHASE-000](../implementation-package/phases/PHASE-000.md) |
 | Related bug       | none                                                                    |
 | Status            | proposed                                                                |
 | Date approved     |                                                                         |

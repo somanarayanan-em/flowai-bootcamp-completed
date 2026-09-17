@@ -8,7 +8,7 @@ This document records bugs and issues found during testing. Items are logged for
 
 - **Impact type:** *Missed/new requirement* = capability was never specified or implemented. *Badly implemented requirement* = requirement exists but implementation is incomplete or wrong.
 - **Where it resides:** Backend (API/service), Frontend (web UI), or both.
-- **Phase when added:** Phase during which the bug was identified. Use the Phase ID (for example PHASE-000). See [implementation-plan.md](../implementation-package/implementation-plan.md).
+- **Phase when added:** Phase during which the bug was identified. Use the Phase ID (for example PHASE-000). Spec files are under [phases/](../implementation-package/phases/). See [implementation-plan.md](../implementation-package/implementation-plan.md).
 - **Status:** Default **new**. Allowed: **new**, **to do**, **priority**, **hold**, **fixed**. When Status is **fixed**, set **Fixed date** to YYYY-MM-DD.
 - **Fixed date:** Empty until Status is **fixed**.
 - **Do not reuse** bug numbers. Increment for each new entry.
@@ -34,7 +34,7 @@ Copy the block below into **Entries**. Replace n with the next number. Add a row
 | Date found | YYYY-MM-DD |
 | Found by | |
 | Summary | |
-| Phase when added | [PHASE-000](../implementation-package/implementation-plan.md#phase-000) |
+| Phase when added | [PHASE-000](../implementation-package/phases/PHASE-000.md) |
 | Status | new |
 | Fixed date | |
 | Bug-fix phase | |

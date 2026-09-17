@@ -13,7 +13,7 @@ Registers that sit beside the baseline (requirements, design, implementation pla
 
 ## Agent pickup
 
-1. Build work: [phase-status.md](../implementation-package/phase-status.md) → Phase ID → eight-section spec.
+1. Build work: [phase-status.md](../implementation-package/phase-status.md) → Phase ID → phase file in [phases/](../implementation-package/phases/).
 2. End of phase (execution-guide Step 4.5): ask whether to log bugs; if yes, add entries here; do not implement the fix in that step.
 3. Spec disagreement: add a **proposed** row in the change tracker. Do not edit requirements, design, or the plan until Status is **approved**. After applying Table C, set Status to **applied**.
 4. Missed/new requirement: log a **bug** (symptom) and a **CHG** (baseline edit), and link them.
