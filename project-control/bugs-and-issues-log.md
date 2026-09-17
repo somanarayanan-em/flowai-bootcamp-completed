@@ -18,7 +18,7 @@ This document records bugs and issues found during testing. Items are logged for
 
 | # | Summary | Phase when added | Status | Fixed date | Entry |
 |---|---------|------------------|--------|------------|-------|
-| *(no entries yet)* | | | | | |
+| 1 | POST /employees/{id}/deactivate returns Flask HTML 404 instead of JSON | PHASE-004 | fixed | 2026-09-17 | [Bug #1](#bug-1) |
 
 ## Template
 
@@ -64,5 +64,46 @@ Copy the block below into **Entries**. Replace n with the next number. Add a row
 | Notes | |
 
 ## Entries
+
+### Bug #1
+
+#### Table A — Identity
+
+| Field | Value |
+|-------|--------|
+| # | 1 |
+| Date found | 2026-09-17 |
+| Found by | Local PHASE-004 verification |
+| Summary | `POST /employees/1/deactivate` returns Flask HTML 404 instead of JSON |
+| Phase when added | [PHASE-004](../implementation-package/phases/PHASE-004.md) |
+| Status | fixed |
+| Fixed date | 2026-09-17 |
+| Bug-fix phase | Reworked in PHASE-004 (same branch) |
+
+#### Table B — Classification
+
+| Field | Value |
+|-------|--------|
+| Impact type | Badly implemented requirement |
+| Where it resides | Backend |
+| Severity | high |
+
+#### Table C — Spec impact
+
+| Document | Path | IDs hit (FR/AC/BR/UI/NFR) |
+|----------|------|---------------------------|
+| Functional requirements | `requirements package/05-functional-requirements.md` | FR-6 |
+| API design | `solution-design/Core design/api-design.md` | FR-6, AC-9, BR-7 |
+| Phase spec | `implementation-package/phases/PHASE-004.md` | PHASE-004 activate/deactivate |
+
+#### Table D — Reproduction
+
+| Field | Value |
+|-------|--------|
+| Preconditions | Flask running on port 5000; `POST /employees` succeeds and returns `id` 1 |
+| Steps | `curl -s -X POST http://127.0.0.1:5000/employees/1/deactivate` |
+| Expected | HTTP 200 JSON employee with `status` Inactive (or JSON 404 `{ "message": "..." }` if id missing) |
+| Actual | Flask default HTML 404: "The requested URL was not found on the server" |
+| Notes | HTML 404 means the route was not matched (unlike our JSON 404 for unknown id). Rework: register activate/deactivate with string path segments and parse id in the view; return JSON for unmatched API 404s. Restart Flask after the change so the process loads the new rules. |
 
 Add new entries below using the template. Increment the bug number for each new entry.
