@@ -1,6 +1,6 @@
 # Tech Stack
 
-**Status:** Draft  
+**Status:** Approved  
 **Folder:** Foundation  
 **Pinned:** 17 September 2026 (current stable releases on that date)
 

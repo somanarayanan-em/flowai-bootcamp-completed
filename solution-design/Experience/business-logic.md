@@ -1,6 +1,6 @@
 # Business Logic
 
-**Status:** Draft  
+**Status:** Approved  
 **Folder:** Experience  
 **Source:** `requirements package/07-business-rules-validation.md`, `05-functional-requirements.md`, [api-design.md](../Core%20design/api-design.md)
 

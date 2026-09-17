@@ -1,6 +1,6 @@
 # Frontend Design
 
-**Status:** Draft  
+**Status:** Approved  
 **Folder:** Experience  
 **Source:** `requirements package/06-ui-interaction-requirements.md`, `09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](business-logic.md)
 

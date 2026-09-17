@@ -1,6 +1,6 @@
 # API Design
 
-**Status:** Draft  
+**Status:** Approved  
 **Folder:** Core design  
 **Source:** FR-1 through FR-6, UI-2 through UI-7, BR-1 through BR-8, [solution-architecture.md](../Foundation/solution-architecture.md)
 

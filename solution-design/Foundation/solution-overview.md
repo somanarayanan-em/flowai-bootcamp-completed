@@ -1,6 +1,6 @@
 # Solution Overview
 
-**Status:** Draft  
+**Status:** Approved  
 **Folder:** Foundation  
 **Source:** Approved requirements package plus the rest of this solution design
 

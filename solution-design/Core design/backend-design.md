@@ -1,6 +1,6 @@
 # Backend Design
 
-**Status:** Draft  
+**Status:** Approved  
 **Folder:** Core design  
 **Source:** `requirements package/05-functional-requirements.md`, `07-business-rules-validation.md`, NFR-4–NFR-6, [solution-architecture.md](../Foundation/solution-architecture.md), [db-design.md](db-design.md)
 
