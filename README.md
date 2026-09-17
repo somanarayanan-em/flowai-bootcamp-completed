@@ -1,20 +1,42 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Employee list maintenance
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Local Flask API and Vite React page for maintaining one organization-wide employee list. This foundation runbook covers install and start commands only.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Requires **Python 3.14.7** and **Node.js 22 LTS**.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Install
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+```bash
+python3.14 -m venv backend/.venv
+source backend/.venv/bin/activate
+pip install -r backend/requirements.txt
+cd frontend && npm install
+```
+
+On Windows, activate with `backend\.venv\Scripts\activate`.
+
+## Run Flask
+
+```bash
+source backend/.venv/bin/activate
+python backend/app.py
+```
+
+API: `http://127.0.0.1:5000` (health: `GET /health`). CORS allows the Vite origin `http://localhost:5173`.
+
+## Run Vite
+
+```bash
+cd frontend
+npm run dev
+```
+
+App: `http://localhost:5173`.
+
+## Run pytest
+
+```bash
+source backend/.venv/bin/activate
+cd backend
+pytest
+```
