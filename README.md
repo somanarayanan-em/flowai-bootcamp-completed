@@ -22,6 +22,12 @@ source backend/.venv/bin/activate
 python backend/app.py
 ```
 
+If `python` is not on your PATH, use the venv interpreter directly:
+
+```bash
+backend/.venv/bin/python backend/app.py
+```
+
 API: `http://127.0.0.1:5000` (health: `GET /health`). CORS allows the Vite origin `http://localhost:5173`.
 
 ## Run Vite
