@@ -28,6 +28,7 @@ Only what is needed for JSON API, SQLite access, the React page talking to Flask
 | Library | Pin | Role | Required by |
 |---------|-----|------|-------------|
 | Flask-Cors | **6.0.5** | Allow the React origin to call the Flask API in local/dev | SPA + API on different ports |
+| pytest | **9.1.1** | Flask and SQLite tests | [testing-strategy.md](../Operations/testing-strategy.md) |
 | Python `sqlite3` | stdlib | Read and write the employee store | NFR-4 |
 | Custom CSS (no component kit) | n/a | Spacing, table, buttons, chips, banner | Frontend design visual treatment |
 
@@ -55,4 +56,5 @@ No SQLAlchemy, no UI component library, no auth SDK.
 | React single page | UI-1 |
 | Flask API | FR-1–FR-6 |
 | SQLite persistence | NFR-4 |
+| pytest | Testing strategy (backend) |
 | Layout CSS | Frontend design (richer one-page UI) |
