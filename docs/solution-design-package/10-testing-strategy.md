@@ -1,8 +1,7 @@
 # Testing Strategy
 
 **Status:** Draft  
-**Folder:** Operations  
-**Source:** `docs/requirements-package/09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](../Experience/business-logic.md), [backend-design.md](../Core%20design/backend-design.md)
+**Source:** `docs/requirements-package/09-acceptance-criteria.md`, [06-api-design.md](06-api-design.md), [07-business-logic.md](07-business-logic.md), [05-backend-design.md](05-backend-design.md)
 
 ## Purpose
 
@@ -21,9 +20,9 @@ Out of scope for tests: delete, bulk import/export, search/sort/filter/paging, r
 
 ## Backend approach
 
-- **Runner:** pytest **9.1.1** (see [tech-stack.md](../Foundation/tech-stack.md)).
-- **HTTP:** Flask test client against the same routes as [api-design.md](../Core%20design/api-design.md).
-- **Store:** a temporary SQLite file with the employee table from [db-design.md](../Core%20design/db-design.md). Not an in-memory-only list as the system of record.
+- **Runner:** pytest **9.1.1** (see [02-tech-stack.md](02-tech-stack.md)).
+- **HTTP:** Flask test client against the same routes as [06-api-design.md](06-api-design.md).
+- **Store:** a temporary SQLite file with the employee table from [04-db-design.md](04-db-design.md). Not an in-memory-only list as the system of record.
 - Each create, edit, activate, and deactivate is one write. Success only after commit.
 
 ## Backend catalog
@@ -68,10 +67,10 @@ Delete, bulk import/export, search, sort, filter, paging, roles, approvals, audi
 
 ## Related design documents
 
-- [../Experience/frontend-design.md](../Experience/frontend-design.md)
-- [../Core design/api-design.md](../Core%20design/api-design.md)
-- [../Experience/business-logic.md](../Experience/business-logic.md)
-- [../Foundation/tech-stack.md](../Foundation/tech-stack.md)
+- [08-frontend-design.md](08-frontend-design.md)
+- [06-api-design.md](06-api-design.md)
+- [07-business-logic.md](07-business-logic.md)
+- [02-tech-stack.md](02-tech-stack.md)
 
 ## Traceability
 

@@ -1,14 +1,13 @@
 # Frontend Design
 
 **Status:** Approved  
-**Folder:** Experience  
-**Source:** `docs/requirements-package/06-ui-interaction-requirements.md`, `09-acceptance-criteria.md`, [api-design.md](../Core%20design/api-design.md), [business-logic.md](business-logic.md)
+**Source:** `docs/requirements-package/06-ui-interaction-requirements.md`, `09-acceptance-criteria.md`, [06-api-design.md](06-api-design.md), [07-business-logic.md](07-business-logic.md)
 
 ## Purpose
 
 The React single page for maintaining employees. Richer layout and visual treatment are a product choice for this design. There are still **no other screens**, no branded design system, and **no interactions beyond UI-1 through UI-7**.
 
-Business rules in [business-logic.md](business-logic.md) still apply. Flask is the authority if the page and server disagree.
+Business rules in [07-business-logic.md](07-business-logic.md) still apply. Flask is the authority if the page and server disagree.
 
 ## Visual direction
 
@@ -117,8 +116,8 @@ The page does not add permission checks. Anyone who can open it can create, edit
 
 ## Related design documents
 
-- [../Core design/api-design.md](../Core%20design/api-design.md)
-- [business-logic.md](business-logic.md)
+- [06-api-design.md](06-api-design.md)
+- [07-business-logic.md](07-business-logic.md)
 
 ## Traceability
 

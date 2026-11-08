@@ -18,4 +18,4 @@ Registers that sit beside the baseline (requirements, design, implementation pla
 3. Spec disagreement: add a **proposed** row in the change tracker. Do not edit requirements, design, or the plan until Status is **approved**. After applying Table C, set Status to **applied**.
 4. Missed/new requirement: log a **bug** (symptom) and a **CHG** (baseline edit), and link them.
 
-Test strategy remains [solution-design/Operations/testing-strategy.md](../solution-design/Operations/testing-strategy.md). Future test cases/evidence can live in a verification package; this folder stays the defect and change registers.
+Test strategy remains [solution-design-package/10-testing-strategy.md](../solution-design-package/10-testing-strategy.md). Future test cases/evidence can live in a verification package; this folder stays the defect and change registers.

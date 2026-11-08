@@ -1,7 +1,6 @@
 # Security Design
 
 **Status:** Scaffold  
-**Folder:** Experience  
 **Source:** `docs/requirements-package/03-user-access.md`, FR-7, NFR-6, NFR-7
 
 ## Purpose
@@ -39,8 +38,8 @@ No additional role checks (FR-7).
 
 ## Related design documents
 
-- [../Foundation/solution-architecture.md](../Foundation/solution-architecture.md)
-- [../Core design/backend-design.md](../Core%20design/backend-design.md)
+- [03-solution-architecture.md](03-solution-architecture.md)
+- [05-backend-design.md](05-backend-design.md)
 
 ## Traceability
 

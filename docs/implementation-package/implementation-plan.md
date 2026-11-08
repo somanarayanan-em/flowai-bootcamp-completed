@@ -13,7 +13,7 @@ Do not implement items in [`docs/requirements-package/11-out-of-scope.md`](../re
 
 **Stack (locked):** Python 3.14.7 / Flask 3.1.3 / React 19.3.0 / Vite 8.3.0 / SQLite via `sqlite3`. Caller is already authorized; no in-app sign-in or roles.
 
-**Source of truth:** [requirements package](../requirements-package/), [solution-design](../solution-design/).
+**Source of truth:** [requirements package](../requirements-package/), [solution design package](../solution-design-package/).
 
 **Progress:** [phase-status.md](phase-status.md) — agents start there, then open the Phase ID link (opens the phase file).
 
@@ -55,7 +55,7 @@ Aligned with out of scope and open questions left open:
 
 - [`docs/student-resource-files/CANONICAL-PHASE-SHAPE.md`](../student-resource-files/CANONICAL-PHASE-SHAPE.md)
 - [`docs/student-resource-files/PHASE-EXECUTION-GUIDE.md`](../student-resource-files/PHASE-EXECUTION-GUIDE.md)
-- [`solution-design/README.md`](../solution-design/README.md)
+- [`solution-design-package/`](../solution-design-package/)
 - [`phase-status.md`](phase-status.md)
 - [`docs/project-control/bugs-and-issues-log.md`](../project-control/bugs-and-issues-log.md)
 - [`project-control/change-tracker.md`](../project-control/change-tracker.md)

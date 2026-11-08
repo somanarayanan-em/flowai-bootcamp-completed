@@ -1,12 +1,11 @@
 # Solution Architecture
 
 **Status:** Draft  
-**Folder:** Foundation  
 **Source:** Approved requirements package; locked stack (Python / Flask, React, SQLite); caller already authorized
 
 ## Purpose
 
-This document defines the runtime shape of the employee list tool: what runs where, how the pieces talk, and which rules are architectural (they constrain later DB, API, UI, and security docs). It does not specify table DDL, HTTP paths, or control layout; those belong in Core design and Experience.
+This document defines the runtime shape of the employee list tool: what runs where, how the pieces talk, and which rules are architectural (they constrain later DB, API, UI, and security docs). It does not specify table DDL, HTTP paths, or control layout; those belong in later design documents in this package.
 
 ## Context
 
@@ -145,13 +144,13 @@ Aligned with `docs/requirements-package/11-out-of-scope.md`:
 
 ## Related design documents
 
-- [tech-stack.md](tech-stack.md)
-- [solution-overview.md](solution-overview.md) (scaffold; not the source of these rules)
-- [../Core design/db-design.md](../Core%20design/db-design.md)
-- [../Core design/backend-design.md](../Core%20design/backend-design.md)
-- [../Core design/api-design.md](../Core%20design/api-design.md)
-- [../Experience/frontend-design.md](../Experience/frontend-design.md)
-- [../Experience/security-design.md](../Experience/security-design.md)
+- [02-tech-stack.md](02-tech-stack.md)
+- [01-solution-overview.md](01-solution-overview.md) (scaffold; not the source of these rules)
+- [04-db-design.md](04-db-design.md)
+- [05-backend-design.md](05-backend-design.md)
+- [06-api-design.md](06-api-design.md)
+- [08-frontend-design.md](08-frontend-design.md)
+- [09-security-design.md](09-security-design.md)
 
 ## Traceability
 

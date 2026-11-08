@@ -1,6 +1,6 @@
 # Implementation Package
 
-Phased implementation plan for the employee list maintenance solution. Phases follow the Canonical SDLC Phase Shape. Content traces only to the approved [requirements package](../requirements-package/) and [solution design](../solution-design/). No extra product features.
+Phased implementation plan for the employee list maintenance solution. Phases follow the Canonical SDLC Phase Shape. Content traces only to the approved [requirements package](../requirements-package/) and [solution design package](../solution-design-package/). No extra product features.
 
 | Document | Purpose |
 |----------|---------|

@@ -1,7 +1,6 @@
 # Solution Overview
 
 **Status:** Approved  
-**Folder:** Foundation  
 **Source:** Approved requirements package plus the rest of this solution design
 
 ## Purpose
@@ -65,15 +64,15 @@ One persona: **employee record maintainer**. Viewers and maintainers are the sam
 
 | Area         | Gist                                                                                                                             | Document                                                               |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Architecture | React page → Flask → SQLite. Success means committed. Auth outside.                                                              | [solution-architecture.md](solution-architecture.md)                   |
-| Stack        | Python 3.14.7, Flask 3.1.3, React 19.3.0, Vite 8.3.0, Node 22 LTS, SQLite via `sqlite3`, Flask-Cors 6.0.5, custom CSS            | [tech-stack.md](tech-stack.md)                                         |
-| Data         | One employee: ID (store-assigned), first name, last name, status Active/Inactive. Duplicate names allowed. No delete.            | [../Core design/db-design.md](../Core%20design/db-design.md)           |
-| Backend      | Flask validates, assigns ID, writes SQLite. No roles. No selected-employee on the server.                                        | [../Core design/backend-design.md](../Core%20design/backend-design.md) |
-| API          | `GET/POST /employees`, `PATCH /employees/{id}`, `POST .../activate`, `POST .../deactivate`                                       | [../Core design/api-design.md](../Core%20design/api-design.md)         |
-| Rules        | Checks C1–C10: trim names, create/edit validation, optional create status, partial edit, activate/deactivate do not change names | [../Experience/business-logic.md](../Experience/business-logic.md)     |
-| UI           | One page: banner, table (or empty), create card, edit/status card. Status chips, selected-row highlight. Same five operations.   | [../Experience/frontend-design.md](../Experience/frontend-design.md)   |
-| Access       | Caller already authorized. Equal rights. Names are personal data (org policy).                                                   | [../Experience/security-design.md](../Experience/security-design.md)   |
-| Tests        | Prove AC-1–AC-12 (and BR/NFR those criteria need).                                                                               | [../Operations/testing-strategy.md](../Operations/testing-strategy.md) |
+| Architecture | React page → Flask → SQLite. Success means committed. Auth outside.                                                              | [03-solution-architecture.md](03-solution-architecture.md)                   |
+| Stack        | Python 3.14.7, Flask 3.1.3, React 19.3.0, Vite 8.3.0, Node 22 LTS, SQLite via `sqlite3`, Flask-Cors 6.0.5, custom CSS            | [02-tech-stack.md](02-tech-stack.md)                                         |
+| Data         | One employee: ID (store-assigned), first name, last name, status Active/Inactive. Duplicate names allowed. No delete.            | [04-db-design.md](04-db-design.md)           |
+| Backend      | Flask validates, assigns ID, writes SQLite. No roles. No selected-employee on the server.                                        | [05-backend-design.md](05-backend-design.md) |
+| API          | `GET/POST /employees`, `PATCH /employees/{id}`, `POST .../activate`, `POST .../deactivate`                                       | [06-api-design.md](06-api-design.md)         |
+| Rules        | Checks C1–C10: trim names, create/edit validation, optional create status, partial edit, activate/deactivate do not change names | [07-business-logic.md](07-business-logic.md)     |
+| UI           | One page: banner, table (or empty), create card, edit/status card. Status chips, selected-row highlight. Same five operations.   | [08-frontend-design.md](08-frontend-design.md)   |
+| Access       | Caller already authorized. Equal rights. Names are personal data (org policy).                                                   | [09-security-design.md](09-security-design.md)   |
+| Tests        | Prove AC-1–AC-12 (and BR/NFR those criteria need).                                                                               | [10-testing-strategy.md](10-testing-strategy.md) |
 
 
 
@@ -86,9 +85,9 @@ Open questions stay open: bulk load, HR/payroll ID meaning, rehire vs new row, s
 
 ## Related design documents
 
-- [tech-stack.md](tech-stack.md)
-- [solution-architecture.md](solution-architecture.md)
-- [../README.md](../README.md)
+- [02-tech-stack.md](02-tech-stack.md)
+- [03-solution-architecture.md](03-solution-architecture.md)
+- [docs/README.md](../README.md)
 
 
 

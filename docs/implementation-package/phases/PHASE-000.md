@@ -49,7 +49,7 @@ None
 
 #### Human Verification (Human Gate)
 
-1. Confirm pinned versions match [`docs/solution-design/Foundation/tech-stack.md`](../../solution-design/Foundation/tech-stack.md)
+1. Confirm pinned versions match [`docs/solution-design-package/02-tech-stack.md`](../../solution-design-package/02-tech-stack.md)
 2. Confirm there is no authentication SDK, ORM, or UI component library
 3. Confirm the React app is a single Vite project with no extra routes as a product feature
 

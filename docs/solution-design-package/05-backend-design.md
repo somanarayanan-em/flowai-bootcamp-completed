@@ -1,12 +1,11 @@
 # Backend Design
 
 **Status:** Approved  
-**Folder:** Core design  
-**Source:** `docs/requirements-package/05-functional-requirements.md`, `07-business-rules-validation.md`, NFR-4–NFR-6, [solution-architecture.md](../Foundation/solution-architecture.md), [db-design.md](db-design.md)
+**Source:** `docs/requirements-package/05-functional-requirements.md`, `07-business-rules-validation.md`, NFR-4–NFR-6, [03-solution-architecture.md](03-solution-architecture.md), [04-db-design.md](04-db-design.md)
 
 ## Purpose
 
-What Flask does for list, create, edit, activate, and deactivate. HTTP paths and JSON are in [api-design.md](api-design.md). The table is in [db-design.md](db-design.md).
+What Flask does for list, create, edit, activate, and deactivate. HTTP paths and JSON are in [06-api-design.md](06-api-design.md). The table is in [04-db-design.md](04-db-design.md).
 
 Flask validates names, assigns employee ID at create, writes SQLite, and reports success only after commit. It does not store a selected employee, check roles, or delete rows.
 
@@ -75,10 +74,10 @@ Anyone who can use the tool can list, create, edit, activate, and deactivate (FR
 
 ## Related design documents
 
-- [db-design.md](db-design.md)
-- [api-design.md](api-design.md)
-- [../Experience/business-logic.md](../Experience/business-logic.md)
-- [../Foundation/solution-architecture.md](../Foundation/solution-architecture.md)
+- [04-db-design.md](04-db-design.md)
+- [06-api-design.md](06-api-design.md)
+- [07-business-logic.md](07-business-logic.md)
+- [03-solution-architecture.md](03-solution-architecture.md)
 
 ## Traceability
 

@@ -1,8 +1,7 @@
 # Business Logic
 
 **Status:** Approved  
-**Folder:** Experience  
-**Source:** `docs/requirements-package/07-business-rules-validation.md`, `05-functional-requirements.md`, [api-design.md](../Core%20design/api-design.md)
+**Source:** `docs/requirements-package/07-business-rules-validation.md`, `05-functional-requirements.md`, [06-api-design.md](06-api-design.md)
 
 ## Purpose
 
@@ -17,7 +16,7 @@ Implementation rules for employee operations: which endpoint runs, which fields 
 | `lastName` | Create required; edit if present in the request | After trim, not empty |
 | `status` | Create optional in API (default **Active**); otherwise only activate/deactivate | Only `Active` or `Inactive` |
 
-JSON names match [api-design.md](../Core%20design/api-design.md). Duplicate `firstName` + `lastName` is allowed. `id` distinguishes rows.
+JSON names match [06-api-design.md](06-api-design.md). Duplicate `firstName` + `lastName` is allowed. `id` distinguishes rows.
 
 ## Shared checks
 
@@ -125,9 +124,9 @@ No extra permission check on these operations (FR-7). Authorization to reach the
 
 ## Related design documents
 
-- [../Core design/api-design.md](../Core%20design/api-design.md)
-- [../Core design/backend-design.md](../Core%20design/backend-design.md)
-- [frontend-design.md](frontend-design.md)
+- [06-api-design.md](06-api-design.md)
+- [05-backend-design.md](05-backend-design.md)
+- [08-frontend-design.md](08-frontend-design.md)
 
 ## Traceability
 

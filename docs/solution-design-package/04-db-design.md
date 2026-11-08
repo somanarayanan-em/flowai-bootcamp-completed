@@ -1,12 +1,11 @@
 # DB Design
 
 **Status:** Approved  
-**Folder:** Core design  
-**Source:** `docs/requirements-package/04-data-requirements.md`, `07-business-rules-validation.md`, NFR-4, NFR-5, [solution-architecture.md](../Foundation/solution-architecture.md)
+**Source:** `docs/requirements-package/04-data-requirements.md`, `07-business-rules-validation.md`, NFR-4, NFR-5, [03-solution-architecture.md](03-solution-architecture.md)
 
 ## Purpose
 
-Define the one persisted employee record in SQLite. Only the four business data elements from the requirements. No extra attributes. HTTP field names live in [api-design.md](api-design.md); this document is the store.
+Define the one persisted employee record in SQLite. Only the four business data elements from the requirements. No extra attributes. HTTP field names live in [06-api-design.md](06-api-design.md); this document is the store.
 
 ## Store
 
@@ -70,9 +69,9 @@ There is no second table. There are no audit, version, email, or department fiel
 
 ## Related design documents
 
-- [backend-design.md](backend-design.md)
-- [api-design.md](api-design.md)
-- [../Foundation/solution-architecture.md](../Foundation/solution-architecture.md)
+- [05-backend-design.md](05-backend-design.md)
+- [06-api-design.md](06-api-design.md)
+- [03-solution-architecture.md](03-solution-architecture.md)
 
 ## Traceability
 
