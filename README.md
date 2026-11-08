@@ -1,52 +1,5 @@
-# Employee list maintenance
+# Employee list — implementation plan
 
-Local Flask API and Vite React page for maintaining one organization-wide employee list. This foundation runbook covers install and start commands only.
+This branch contains the requirements package, solution design package, and implementation package.
 
-Requires **Python 3.14.7** and **Node.js 22 LTS**.
-
-## Install
-
-```bash
-python3.14 -m venv backend/.venv
-source backend/.venv/bin/activate
-pip install -r backend/requirements.txt
-cd frontend && npm install
-```
-
-On Windows, activate with `backend\.venv\Scripts\activate`.
-
-## Run Flask
-
-```bash
-source backend/.venv/bin/activate
-python backend/app.py
-```
-
-If `python` is not on your PATH, use the venv interpreter directly:
-
-```bash
-backend/.venv/bin/python backend/app.py
-```
-
-API: `http://127.0.0.1:5000` (health: `GET /health`). CORS allows the Vite origin `http://localhost:5173`.
-
-## Run Vite
-
-```bash
-cd frontend
-npm run dev
-```
-
-App: `http://localhost:5173`.
-
-## Documentation
-
-Project docs are under [`docs/`](docs/README.md): requirements, solution design, implementation phases, and project control.
-
-## Run pytest
-
-```bash
-source backend/.venv/bin/activate
-cd backend
-pytest
-```
+See [`docs/`](docs/README.md).
