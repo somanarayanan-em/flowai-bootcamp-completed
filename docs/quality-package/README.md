@@ -1,7 +1,7 @@
 # Quality Package — Employee List Maintenance
 
-**Status:** Pass 1 + Pass 2 complete; Pass 3 QE plan drafted — ready for plan gate (pre–Pass 4)  
-**Branch context:** `quality-package`  
+**Status:** Pass 1–3 on this branch (pre–Pass 4); scripts on `quality-execution`  
+**Branch context:** `implementation-qe`  
 **Source of truth for scenarios:** [requirements package](../requirements-package/), then design delta from [solution design package](../solution-design-package/)
 
 This package holds the QE test package and QE plan for the employee list capability. Scenarios come from requirements first. Scripts are generated only after the [plan gate](qe-plan-gate-notes.md) is approved.
