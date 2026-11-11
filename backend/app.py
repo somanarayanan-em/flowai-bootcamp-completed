@@ -21,13 +21,17 @@ from store import (
     update_employee_names,
 )
 
-VITE_DEV_ORIGIN = "http://localhost:5173"
+# localhost and 127.0.0.1 both used by Vite / Playwright locally
+VITE_DEV_ORIGINS = (
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+)
 
 
 def create_app(database_path=None):
     app = Flask(__name__)
     app.config["DATABASE_PATH"] = str(database_path or default_database_path())
-    CORS(app, origins=[VITE_DEV_ORIGIN])
+    CORS(app, origins=list(VITE_DEV_ORIGINS))
     ensure_schema(app.config["DATABASE_PATH"])
 
     @app.get("/health")
@@ -163,7 +167,15 @@ def create_app(database_path=None):
     return app
 
 
-app = create_app()
+def _database_path_from_env():
+    """Optional path for local/dev and Playwright runs (EMPLOYEE_DATABASE_PATH)."""
+    import os
+
+    configured = os.environ.get("EMPLOYEE_DATABASE_PATH")
+    return configured if configured else None
+
+
+app = create_app(database_path=_database_path_from_env())
 
 
 if __name__ == "__main__":

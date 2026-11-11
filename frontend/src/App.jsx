@@ -135,6 +135,7 @@ export default function App() {
           type="button"
           className="plus-button"
           aria-label="Add employee"
+          data-testid="open-create"
           onClick={openCreate}
         >
           +
@@ -143,12 +144,12 @@ export default function App() {
 
       <section className="list-region" aria-label="Employee list">
         {employees.length === 0 ? (
-          <div className="empty">
+          <div className="empty" data-testid="empty-list">
             <h2>No employees yet.</h2>
             <p>Use + to add someone.</p>
           </div>
         ) : (
-          <table>
+          <table data-testid="employee-table">
             <thead>
               <tr>
                 <th>ID</th>
@@ -164,6 +165,7 @@ export default function App() {
                 return (
                   <tr
                     key={employee.id}
+                    data-testid={`employee-row-${employee.id}`}
                     className={
                       employee.id === selectedId ? "selected" : undefined
                     }
@@ -260,6 +262,7 @@ export default function App() {
           <p
             className={`table-message table-message-${tableMessage.kind}`}
             role="status"
+            data-testid="outcome-banner"
           >
             {tableMessage.text}
           </p>
@@ -270,6 +273,7 @@ export default function App() {
         <div className="overlay" onClick={closeCreate}>
           <form
             className="floating-box"
+            data-testid="create-form"
             onClick={(event) => event.stopPropagation()}
             onSubmit={submitCreate}
           >
@@ -281,6 +285,7 @@ export default function App() {
                 onChange={(event) => setCreateFirst(event.target.value)}
                 autoComplete="off"
                 autoFocus
+                data-testid="create-first-name"
               />
             </label>
             <label>
@@ -289,11 +294,14 @@ export default function App() {
                 value={createLast}
                 onChange={(event) => setCreateLast(event.target.value)}
                 autoComplete="off"
+                data-testid="create-last-name"
               />
             </label>
             {createError ? <p className="field-error">{createError}</p> : null}
             <div className="floating-actions">
-              <button type="submit">Create</button>
+              <button type="submit" data-testid="create-submit">
+                Create
+              </button>
               <button type="button" onClick={closeCreate}>
                 Cancel
               </button>

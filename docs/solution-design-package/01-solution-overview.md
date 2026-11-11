@@ -72,7 +72,7 @@ One persona: **employee record maintainer**. Viewers and maintainers are the sam
 | Rules        | Checks C1–C10: trim names, create/edit validation, optional create status, partial edit, activate/deactivate do not change names | [07-business-logic.md](07-business-logic.md)     |
 | UI           | One page: banner, table (or empty), create card, edit/status card. Status chips, selected-row highlight. Same five operations.   | [08-frontend-design.md](08-frontend-design.md)   |
 | Access       | Caller already authorized. Equal rights. Names are personal data (org policy).                                                   | [09-security-design.md](09-security-design.md)   |
-| Tests        | Prove AC-1–AC-12 (and BR/NFR those criteria need).                                                                               | [10-testing-strategy.md](10-testing-strategy.md) |
+| Tests        | pytest API/store + Playwright UI; prove AC-1–AC-12 (and BR/NFR those criteria need).                                           | [10-testing-strategy.md](10-testing-strategy.md) |
 
 
 

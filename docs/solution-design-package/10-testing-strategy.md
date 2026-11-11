@@ -1,20 +1,21 @@
 # Testing Strategy
 
-**Status:** Draft  
-**Source:** `docs/requirements-package/09-acceptance-criteria.md`, [06-api-design.md](06-api-design.md), [07-business-logic.md](07-business-logic.md), [05-backend-design.md](05-backend-design.md)
+**Status:** Approved  
+**Source:** `docs/requirements-package/09-acceptance-criteria.md`, [06-api-design.md](06-api-design.md), [07-business-logic.md](07-business-logic.md), [05-backend-design.md](05-backend-design.md), [08-frontend-design.md](08-frontend-design.md)
 
 ## Purpose
 
-How we prove the solution meets the accepted requirements. This pass specifies **backend, API, and SQLite** tests. Frontend cases are deferred; tools for them are named only.
+How we prove the solution meets the accepted requirements. This package specifies **backend / API / SQLite** tests with pytest and **browser UI** tests with Playwright for observables the API cannot prove.
 
-Do not add tests for out-of-scope features. No browser end-to-end tests in this document.
+Do not add tests for out-of-scope product features.
 
 ## Scope
 
 | Now | Later |
 |-----|--------|
-| pytest against Flask and a temporary SQLite file | Vitest + Testing Library for the React page |
-| Acceptance criteria that the API can prove | AC-2 display, AC-3 selection, AC-12 banner, table/chips |
+| pytest against Flask and a temporary SQLite file | Vitest + Testing Library for component-level React tests (optional; not required to close CASE IDs) |
+| Playwright against the Vite page + Flask API | — |
+| Acceptance criteria the API can prove | AC-2 empty presentation, AC-3 selection, AC-12 banner, UI-1–UI-7 observables via Playwright |
 
 Out of scope for tests: delete, bulk import/export, search/sort/filter/paging, roles, approvals, audit trail, integrations, reports.
 
@@ -55,15 +56,28 @@ Out of scope for tests: delete, bulk import/export, search/sort/filter/paging, r
 | Persist after restart (NFR-4) | Successful write; new Flask client on the same SQLite file still returns the row |
 | Concurrent writes do not corrupt a record (NFR-5) | Two overlapping writes; no half-written row. Sequential overlapping requests are enough. No extra product (no merge UI). |
 
-## Frontend (later)
+## Frontend / browser approach (Playwright)
 
-When UI tests are designed: **Vitest** and **Testing Library**, matching Vite and React. No case list in this pass.
+- **Runner:** Playwright Test **1.65.0** (see [02-tech-stack.md](02-tech-stack.md)).
+- **Surface:** the React single page served by Vite, talking to Flask over HTTP JSON.
+- **Store for UI runs:** a dedicated temporary SQLite file for the Flask process (env `EMPLOYEE_DATABASE_PATH`), not the shared developer DB, so empty-list and create flows are deterministic.
+- **What Playwright proves** (API cannot): empty heading with create still available (AC-2), visible selection (AC-3), create form has no employee ID field (UI-4), edit fields pre-filled (UI-5), outcome banner on the page (UI-7 / AC-12), single-page layout (UI-1), no in-app role UI (FR-7 / AC-11).
 
-Those tests should cover what the API cannot: empty heading and create card still visible (AC-2), visible selection and actions on that id (AC-3), outcome banner (AC-12).
+## Frontend catalog (Playwright)
+
+| Intent | Observation | Proves |
+|--------|-------------|--------|
+| Empty list presentation | Empty heading/copy; create control still available | AC-2, UI-2 |
+| Single page | List and actions without navigating to another route | UI-1 |
+| Selection visible | Selected row is visually distinct; actions apply to that id | AC-3, UI-3, FR-2 |
+| Create form has no ID field | Create UI exposes names only | UI-4, BR-2 |
+| Edit pre-fill | Edit fields show selected employee names | UI-5 |
+| Outcome banner | Success/failure text visible on the page after actions | UI-7, AC-12 |
+| No role UI | No permission prompt or role gate in the page | FR-7, AC-11 |
 
 ## Out of scope for tests
 
-Delete, bulk import/export, search, sort, filter, paging, roles, approvals, audit trail, integrations, reports, browser E2E.
+Delete, bulk import/export, search, sort, filter, paging, roles, approvals, audit trail, integrations, reports. Vitest / Testing Library remain optional and are not required to close CASE IDs once Playwright covers the UI catalog.
 
 ## Related design documents
 
@@ -78,4 +92,4 @@ Delete, bulk import/export, search, sort, filter, paging, roles, approvals, audi
 |----------|-----------------|
 | Backend catalog | AC-1, AC-2 (empty JSON), AC-4–AC-12 (API), FR-1–FR-7, BR-1–BR-8, C1–C10 |
 | Persistence | NFR-4, NFR-5, BR-8 |
-| Frontend (deferred) | AC-2 display, AC-3, AC-12 banner, UI-1–UI-7 |
+| Playwright UI catalog | AC-2 display, AC-3, AC-12 banner, UI-1–UI-7, FR-2, FR-7 |

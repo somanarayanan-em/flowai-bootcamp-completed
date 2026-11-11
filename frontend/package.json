@@ -6,13 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "playwright test",
+    "test:e2e:list-002": "playwright test e2e/case-list-002.spec.js",
+    "test:e2e:create": "playwright test e2e/case-create-employee-ui.spec.js"
   },
   "dependencies": {
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@playwright/test": "1.65.0",
     "@vitejs/plugin-react": "6.1.1",
     "vite": "8.3.0"
   }
