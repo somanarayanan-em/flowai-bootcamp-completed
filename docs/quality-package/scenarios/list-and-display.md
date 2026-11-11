@@ -38,18 +38,3 @@
 **Given** a user is using the tool  
 **When** they view the list and perform maintenance actions  
 **Then** list and actions remain on a single page with no navigation to another screen required
-
-## CASE-LIST-005 — Empty list at API is success with no rows (design-delta)
-
-**Type:** Alternate  
-**Traces:** AC-2, DA-005  
-**Origin:** Design delta ([06-api-design.md](../../solution-design-package/06-api-design.md))
-
-**Given** the store has no employees  
-**When** the list of employees is requested  
-**Then** the result is an empty collection (not an error), and create remains available to the user
-
-## Coverage note
-
-- **Negative:** Not applicable for “display list” alone — failure to load is not specified in requirements (GAP). No invented error CASE.
-- See [coverage-check.md](../coverage-check.md).

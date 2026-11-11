@@ -39,36 +39,6 @@
 **When** the user edits the selected employee to that same first and last name  
 **Then** the edit succeeds; employee ID still distinguishes the records
 
-## CASE-EDT-005 — Partial edit of one name field (design-delta)
-
-**Type:** Alternate  
-**Traces:** FR-4, DA-004  
-**Origin:** Design delta ([07-business-logic.md](../../solution-design-package/07-business-logic.md), C3)
-
-**Given** an existing employee record  
-**When** only one of first name or last name is submitted for edit and it is non-empty after trim  
-**Then** that name is updated, the omitted name is unchanged, and status is unchanged
-
-## CASE-EDT-006 — Status in edit body is ignored (design-delta, edge)
-
-**Type:** Edge  
-**Traces:** BR-5, DA-004  
-**Origin:** Design delta (C8)
-
-**Given** an existing employee  
-**When** an edit request includes a `status` value in the body along with a valid name change  
-**Then** the name updates and status is not changed by the edit
-
-## CASE-EDT-007 — Unknown employee id on edit (design-delta, negative)
-
-**Type:** Negative  
-**Traces:** BR-8, DA-002  
-**Origin:** Design delta (C7)
-
-**Given** no employee exists for the given employee ID  
-**When** an edit is attempted for that ID  
-**Then** nothing is saved and the outcome indicates failure
-
 ## CASE-EDT-008 — Edit fields pre-filled from selected employee (positive / UI)
 
 **Type:** Positive  

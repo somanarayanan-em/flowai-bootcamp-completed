@@ -38,13 +38,3 @@
 **Given** two overlapping name or status operations complete  
 **When** the resulting employee is read  
 **Then** the record has complete fields (id, first name, last name, status Active or Inactive)—no half-written row
-
-## CASE-PER-005 — Success only after commit (design-delta)
-
-**Type:** Positive  
-**Traces:** NFR-4, DA-001  
-**Origin:** Design delta ([06-api-design.md](../../solution-design-package/06-api-design.md))
-
-**Given** a write operation is in progress  
-**When** success is reported to the caller  
-**Then** the change has already been committed to the store

@@ -74,33 +74,3 @@
 **Given** a user wants to change only status  
 **When** they use the edit action  
 **Then** status is not changed through edit; status changes are performed only via activate and deactivate
-
-## CASE-ACT-009 — Unknown id on activate (design-delta, negative)
-
-**Type:** Negative  
-**Traces:** DA-002, BR-8  
-**Origin:** Design delta (C7)
-
-**Given** no employee exists for the given employee ID  
-**When** activate is attempted for that ID  
-**Then** nothing is saved and the outcome indicates failure
-
-## CASE-ACT-010 — Unknown id on deactivate (design-delta, negative)
-
-**Type:** Negative  
-**Traces:** DA-002, BR-8  
-**Origin:** Design delta (C7)
-
-**Given** no employee exists for the given employee ID  
-**When** deactivate is attempted for that ID  
-**Then** nothing is saved and the outcome indicates failure
-
-## CASE-ACT-011 — Name fields on activate/deactivate are ignored (design-delta, edge)
-
-**Type:** Edge  
-**Traces:** BR-5, DA-004  
-**Origin:** Design delta (C9)
-
-**Given** an existing employee  
-**When** activate or deactivate is requested with name fields in the body  
-**Then** status changes as requested and names remain unchanged

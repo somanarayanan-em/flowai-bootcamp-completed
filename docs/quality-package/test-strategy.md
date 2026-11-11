@@ -1,7 +1,7 @@
 # Test Strategy
 
-**Status:** Updated for Playwright (CHG-001)  
-**Pass:** 1 + 2 (requirements package + design delta); design delta includes Playwright UI  
+**Status:** Pass 1 (requirements-first) — design delta deferred to Pass 2  
+**Pass:** 1 (requirements package scenarios)  
 **Sources:** [requirements package](../requirements-package/), [solution-design-package/10-testing-strategy.md](../solution-design-package/10-testing-strategy.md), [06-api-design.md](../solution-design-package/06-api-design.md)
 
 ## Purpose

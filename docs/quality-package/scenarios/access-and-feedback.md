@@ -47,18 +47,3 @@
 **Given** a user performs create, then edit, then activate or deactivate  
 **When** each action finishes  
 **Then** each action has a visible success or failure outcome (plain text is sufficient)
-
-## CASE-ACC-006 — Failure body carries a plain message (design-delta, edge)
-
-**Type:** Edge  
-**Traces:** UI-7, AC-12, DA-001  
-**Origin:** Design delta ([06-api-design.md](../../solution-design-package/06-api-design.md))
-
-**Given** a create or edit fails validation  
-**When** the failure is returned  
-**Then** the outcome includes a plain-text message suitable to show the user
-
-## Coverage note
-
-- Authorization grant itself is outside the tool (NFR-6); scenarios assume the user already can reach the tool.
-- No CASE invents sign-in, roles, or approvals (out of scope).

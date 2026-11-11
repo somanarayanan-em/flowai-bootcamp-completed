@@ -56,33 +56,3 @@
 **Given** the current employee list is known  
 **When** a create fails validation  
 **Then** no part of the change is saved and the list is unchanged
-
-## CASE-CRT-007 — Optional create status Active or Inactive (design-delta)
-
-**Type:** Alternate  
-**Traces:** FR-3, BR-4, DA-003  
-**Origin:** Design delta ([06-api-design.md](../../solution-design-package/06-api-design.md), C5)
-
-**Given** a create request includes `status` of Active or Inactive along with valid names  
-**When** the create is submitted  
-**Then** the new record is stored with that status (UI form still omits status and defaults Active)
-
-## CASE-CRT-008 — Invalid create status rejected (design-delta, negative)
-
-**Type:** Negative  
-**Traces:** BR-4, BR-8, DA-003  
-**Origin:** Design delta (C5)
-
-**Given** a create request includes a status value other than Active or Inactive  
-**When** the create is submitted  
-**Then** nothing is stored and a message states what is invalid
-
-## CASE-CRT-009 — Client-supplied id on create is ignored (design-delta, edge)
-
-**Type:** Edge  
-**Traces:** BR-2, DA-003  
-**Origin:** Design delta (C4)
-
-**Given** a create request includes an `id` chosen by the client along with valid names  
-**When** the create succeeds  
-**Then** the stored employee ID is assigned by the tool, not the client-chosen value
