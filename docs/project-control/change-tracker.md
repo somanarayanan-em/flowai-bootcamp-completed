@@ -34,7 +34,7 @@ After **applied**, the packages are the source of truth. Do not leave the only c
 
 | CHG                | Summary | Affects | Related bug | Status | Applied date | Entry |
 | ------------------ | ------- | ------- | ----------- | ------ | ------------ | ----- |
-| *(no entries yet)* |         |         |             |        |              |       |
+| CHG-001 | Add Playwright for UI CASE IDs | Design, Quality package, Implementation plan notes | none | applied | 2026-11-11 | [#chg-001](#chg-001) |
 
 
 
@@ -130,5 +130,53 @@ Copy paths from Table C. Tick when Status becomes **applied**.
 
 
 ## Entries
+
+### CHG-001
+
+#### Table A — Identity
+
+| Field             | Value |
+| ----------------- | ----- |
+| Change ID         | CHG-001 |
+| Title             | Add Playwright browser UI tests for former Manual CASE IDs |
+| Date raised       | 2026-11-11 |
+| Raised by         | User |
+| Phase when raised | Pass 4 / TEST-007 |
+| Related bug       | none |
+| Status            | applied |
+| Date approved     | 2026-11-11 |
+| Approved by       | User (chat: get Playwright done) |
+| Date applied      | 2026-11-11 |
+| Applied by        | Agent |
+
+#### Table B — Classification
+
+| Field                  | Value |
+| ---------------------- | ----- |
+| Affects                | Design, Quality package, Implementation plan (out-of notes) |
+| Change kind            | Design alignment |
+| Trigger                | Other |
+| Why the baseline moves | UI observables need browser automation; Playwright replaces Manual-only disposition for twelve UI CASE IDs |
+
+#### Table C — Baseline delta (summary)
+
+| # | Package | Path | After |
+| - | ------- | ---- | ----- |
+| 1 | Design | `02-tech-stack.md` | Pin Playwright Test 1.65.0 |
+| 2 | Design | `10-testing-strategy.md` | Backend pytest + Playwright UI catalog; E2E no longer deferred |
+| 3 | Quality | `dispositions.md`, `test-strategy.md`, `qe-plan.md`, `TEST-007.md` | Manual → Automate (UI); TEST-007 = Playwright UI Verification |
+| 4 | Implementation | `implementation-plan.md` | Remove “browser E2E deferred” from out-of-plan |
+| 5 | App | `backend/app.py`, `frontend/` | `EMPLOYEE_DATABASE_PATH`; Playwright pilot CASE-LIST-002 |
+
+#### Table F — Apply checklist
+
+| Path | Updated? |
+| ---- | -------- |
+| docs/solution-design-package/02-tech-stack.md | yes |
+| docs/solution-design-package/10-testing-strategy.md | yes |
+| docs/quality-package/* (strategy, dispositions, qe-plan, TEST-007, gates) | yes |
+| docs/implementation-package/implementation-plan.md | yes |
+| frontend Playwright pilot + package.json | yes |
+| backend EMPLOYEE_DATABASE_PATH | yes |
 
 Add new entries below using the template. Increment the CHG number for each new entry.

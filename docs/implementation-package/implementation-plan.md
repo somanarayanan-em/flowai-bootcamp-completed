@@ -48,8 +48,7 @@ Aligned with out of scope and open questions left open:
 - Delete, bulk import/export, search, sort, filter, paging, undo
 - In-app sign-in, roles, approvals, audit trail
 - Extra employee attributes; HR/payroll ID meaning; rehire policy; hiding inactives
-- Browser end-to-end test suite (testing strategy defers E2E)
-- Vitest/Testing Library as a required gate (named for later)
+- Vitest/Testing Library as a required gate (optional later; Playwright covers UI CASE IDs per testing strategy)
 
 ## Related documents
 
